@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080c17">
+<meta name="description" content="Hypra Vision helps turn ideas into practical project plans. Beyond imagination.">
+<title>Hypra Vision — Beyond Imagination</title>
+<style>
+:root{--bg:#080c17;--panel:#10182a;--panel2:#141f34;--line:#26334b;--text:#f2f5ff;--muted:#99a6bd;--blue:#91a5ff;--cyan:#62dce8;--green:#72e0b5;--font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.55;overflow-x:hidden}button,input,textarea{font:inherit}button{cursor:pointer}.bg-glow{position:fixed;z-index:-1;pointer-events:none;width:500px;height:500px;filter:blur(110px);opacity:.12;border-radius:50%}.glow-a{background:#4864ff;top:-260px;left:22%}.glow-b{background:#00cbd7;right:-280px;top:35%}.wrap{width:min(1120px,calc(100% - 44px));margin:auto}
+header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff10;position:relative;z-index:3}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--text)}.logo{width:38px;height:38px;border-radius:11px;border:1px solid #596eae;background:linear-gradient(140deg,#1d2b4b,#10172a);display:flex;align-items:center;justify-content:center;gap:3px;box-shadow:0 0 25px #6b83ff13}.logo i{display:block;width:3px;border-radius:4px;background:var(--blue)}.logo i:nth-child(1){height:12px}.logo i:nth-child(2){height:21px;background:var(--cyan)}.logo i:nth-child(3){height:15px}.brand-name{font-weight:800;font-size:13px;letter-spacing:1.7px}.brand-name span{color:var(--blue)}.brand-tag{display:block;color:#7f8da7;font-size:8px;letter-spacing:2.1px;margin-top:2px}.nav{display:flex;align-items:center;gap:28px}.nav a{font-size:12px;text-decoration:none;color:#aab5c9;transition:.2s}.nav a:hover{color:white}.nav .nav-cta{border:1px solid #5266a0;background:#1b2945;padding:10px 15px;border-radius:8px;color:#e9edff}.menu-btn{display:none;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:white;padding:8px 11px}
+.hero{padding:86px 0 60px;text-align:center}.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #344365;background:#111b2d;border-radius:99px;padding:7px 12px;color:#b9c8ff;font-size:10px;letter-spacing:1.3px;text-transform:uppercase}.pill-dot{height:6px;width:6px;background:var(--cyan);border-radius:50%;box-shadow:0 0 10px #62dce8}.hero h1{font-size:clamp(42px,7vw,76px);line-height:1.06;letter-spacing:-3.8px;margin:23px auto 20px;max-width:850px;font-weight:750}.gradient{background:linear-gradient(100deg,#9baeff,#65dce8);color:transparent;background-clip:text;-webkit-background-clip:text}.hero p{max-width:620px;margin:0 auto;color:var(--muted);font-size:15px;line-height:1.9}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:28px}.btn-primary,.btn-secondary{border-radius:8px;padding:13px 18px;font-weight:700;font-size:12px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:15px;transition:transform .2s,filter .2s}.btn-primary{background:linear-gradient(110deg,#a4b4ff,#65dce8);color:#09111e;border:0}.btn-secondary{border:1px solid #2b3a53;color:#dce5f8;background:#111a2b}.btn-primary:hover,.btn-secondary:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.analyzer-section{padding:12px 0 82px;scroll-margin-top:25px}.section-intro{text-align:center;margin-bottom:24px}.kicker{font-size:9px;font-weight:800;letter-spacing:2px;color:#8fa6ff;text-transform:uppercase}.section-intro h2{font-size:clamp(26px,4vw,38px);letter-spacing:-1.4px;line-height:1.2;margin:10px 0}.section-intro p{font-size:12px;color:var(--muted);margin:0}.analyzer{max-width:860px;margin:auto;border:1px solid #2b3a54;border-radius:16px;padding:22px;background:linear-gradient(145deg,#121d31,#0c1321);box-shadow:0 25px 90px #0002}.analyzer-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.analyzer-label{display:flex;align-items:center;gap:10px;font-weight:700;font-size:13px}.spark{height:29px;width:29px;border-radius:8px;display:grid;place-items:center;background:#1b2b4c;border:1px solid #3b4f7d;color:#aebdff}.local-label{font-size:10px;color:#8190a8}.analyzer textarea{display:block;width:100%;min-height:150px;resize:vertical;background:#090f1c;border:1px solid #293750;border-radius:9px;padding:16px;color:var(--text);font-size:13px;line-height:1.8;outline:none}.analyzer textarea:focus{border-color:#788ef0;box-shadow:0 0 0 3px #7e94ff13}.analyzer textarea::placeholder{color:#687791}.analyzer-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:14px}.helper{font-size:10px;color:#7d8ba3}.helper b{color:#9eb1ff;font-size:14px;margin-right:6px}.analyze-btn{border:0;border-radius:8px;background:linear-gradient(110deg,#a3b3ff,#65dce8);color:#08111e;font-size:12px;font-weight:800;padding:12px 16px;white-space:nowrap}.analyze-btn span{margin-left:14px;font-size:16px}.analyze-btn:disabled{opacity:.65;cursor:wait}.error{color:#ff9aab;font-size:11px;margin-top:9px}.error:empty{display:none}.examples{max-width:860px;margin:23px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.example{display:flex;align-items:flex-start;gap:11px;text-align:left;padding:15px 13px;background:#0d1422;border:1px solid #202e44;border-radius:10px;color:var(--text);transition:.2s}.example:hover{border-color:#5268a4;transform:translateY(-2px)}.example-icon{width:31px;height:31px;flex-shrink:0;border-radius:8px;background:#1a2b4b;color:#a9bcff;display:grid;place-items:center;font-size:16px}.example:nth-child(2) .example-icon{background:#15372f;color:#73ddb5}.example:nth-child(3) .example-icon{background:#302442;color:#c8a6ff}.example strong{display:block;font-size:11px;margin:1px 0 4px}.example small{display:block;color:#7f8da5;font-size:10px;line-height:1.5}.example-arrow{margin-left:auto;color:#7284a3;font-size:12px}
+.features{padding:62px 0 80px;border-top:1px solid #ffffff0c}.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:29px}.feature{padding:22px;border:1px solid #202e43;border-radius:11px;background:#0d1422}.feature-icon{height:34px;width:34px;border-radius:9px;background:#192846;color:#a6b9ff;display:grid;place-items:center;font-size:17px;margin-bottom:15px}.feature h3{font-size:14px;margin:0 0 8px}.feature p{font-size:11px;line-height:1.8;color:#8b9ab2;margin:0}.results{max-width:860px;margin:25px auto 0}.results-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:13px}.results-top h3{font-size:19px;margin:0;letter-spacing:-.5px}.result-actions{display:flex;gap:8px}.small-btn{border:1px solid #34445f;border-radius:7px;background:#111d30;color:#c9d5eb;font-size:10px;padding:8px 10px}.small-btn.saved{color:var(--green);border-color:#326b59}.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.result-card{border:1px solid #24334a;background:linear-gradient(145deg,#101a2b,#0c1320);border-radius:10px;padding:17px;min-width:0}.result-card h4{font-size:12px;margin:0 0 10px;display:flex;align-items:center;gap:8px}.result-card h4 span{color:#9aafff}.result-card p,.result-card li{font-size:11px;line-height:1.8;color:#a0aec3}.result-card p{margin:0}.result-card ul,.result-card ol{padding-left:17px;margin:0}.result-card li{padding-left:2px;margin:3px 0}.notice{grid-column:1/-1;padding:10px 12px;border-left:2px solid #718aff;background:#141f33;color:#8292ab;font-size:10px;line-height:1.7}.notice strong{color:#b7c6ff}.hidden{display:none!important}
+footer{border-top:1px solid #ffffff12;padding:23px 0;color:#65748b;font-size:10px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:15px}.footer-brand{font-weight:800;letter-spacing:1.3px;color:#a6b4cc}.footer-brand span{color:#879eff}
+@media(max-width:760px){.wrap{width:min(100% - 30px,1120px)}header{height:68px}.menu-btn{display:block}.nav{display:none;position:absolute;top:59px;right:0;left:0;padding:15px;background:#0c1423;border:1px solid var(--line);border-radius:10px;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:12px}.nav .nav-cta{text-align:center}.hero{padding:65px 0 48px}.hero h1{letter-spacing:-2.4px}.hero p{font-size:13px}.analyzer{padding:15px}.analyzer-bottom{align-items:flex-start;flex-direction:column}.analyze-btn{align-self:flex-end}.examples,.features-grid{grid-template-columns:1fr}.example{padding:13px}.features{padding:45px 0}.result-grid{grid-template-columns:1fr}.results-top{align-items:flex-start;flex-direction:column}.footer-inner{align-items:flex-start;flex-direction:column}.local-label{font-size:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bg-glow glow-a"></div><div class="bg-glow glow-b"></div>
+<header class="wrap">
+  <a class="brand" href="#" aria-label="Hypra Vision home"><span class="logo"><i></i><i></i><i></i></span><span><span class="brand-name">HYPRA <span>VISION</span></span><span class="brand-tag">BEYOND IMAGINATION</span></span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+  <nav class="nav" id="nav"><a href="#analyzer">Idea analyzer</a><a href="#features">Capabilities</a><a href="#about">About</a><a class="nav-cta" href="#analyzer">Explore your idea ↗</a></nav>
+</header>
+<main>
+<section class="hero wrap">
+  <div class="pill"><span class="pill-dot"></span> AN IDEA-TO-PROJECT WORKSPACE</div>
+  <h1>Every breakthrough<br>starts with <span class="gradient">an idea.</span></h1>
+  <p>Bring your boldest concept. Map its possibilities, understand what it may take, and find a smarter place to begin.</p>
+  <div class="hero-actions"><a class="btn-primary" href="#analyzer">Analyze an idea <span>↗</span></a><a class="btn-secondary" href="#features">Explore the platform ↓</a></div>
+</section>
+<section class="analyzer-section wrap" id="analyzer">
+  <div class="section-intro"><div class="kicker">IDEA INTELLIGENCE</div><h2>Give your imagination a plan.</h2><p>Start with a thought. Leave with a structured first step.</p></div>
+  <div class="analyzer">
+    <div class="analyzer-head"><div class="analyzer-label"><span class="spark">✳</span> What are you imagining?</div><span class="local-label">◉ &nbsp;Private browser workspace</span></div>
+    <textarea id="ideaInput" aria-label="Describe your idea" placeholder="Describe your idea in a few sentences...&#10;&#10;Example: I want to build a small rover that can explore rocky terrain and send images back to a base."></textarea>
+    <div class="analyzer-bottom"><div class="helper"><b>↳</b> AI-powered project planning. Your idea is sent securely to the server for analysis.</div><button class="analyze-btn" id="analyzeBtn">Analyze idea <span>↗</span></button></div>
+    <div class="error" id="error" role="alert"></div>
+  </div>
+  <div class="examples" aria-label="Example ideas">
+    <button class="example" data-idea="I want to build a small rover that can explore rocky terrain and send images back to a base."><span class="example-icon">⌁</span><span><strong>Explore a robotics idea</strong><small>Hardware, sensors & mobility</small></span><span class="example-arrow">↗</span></button>
+    <button class="example" data-idea="I want to create a low-cost system that collects rainwater and helps a household use it efficiently."><span class="example-icon">♧</span><span><strong>Solve a real-world problem</strong><small>Impact, materials & testing</small></span><span class="example-arrow">↗</span></button>
+    <button class="example" data-idea="I want to design a student-friendly app that helps people organize science projects and track their progress."><span class="example-icon">◇</span><span><strong>Design a digital product</strong><small>Features, users & development</small></span><span class="example-arrow">↗</span></button>
+  </div>
+  <div class="results hidden" id="results" aria-live="polite">
+    <div class="results-top"><div><div class="kicker">YOUR PROJECT OUTLINE</div><h3 id="reportTitle">Your idea, mapped out.</h3></div><div class="result-actions"><button class="small-btn" id="saveBtn">☆ Save idea</button><button class="small-btn" id="printBtn">Print report ↗</button></div></div>
+    <div class="result-grid">
+      <article class="result-card"><h4><span>01 /</span> Core concept</h4><p id="overview"></p></article>
+      <article class="result-card"><h4><span>02 /</span> What to validate</h4><ul id="feasibility"></ul></article>
+      <article class="result-card"><h4><span>03 /</span> Starting checklist</h4><ul id="requirements"></ul></article>
+      <article class="result-card"><h4><span>04 /</span> Suggested next steps</h4><ol id="steps"></ol></article>
+      <article class="result-card"><h4><span>05 /</span> Challenges to consider</h4><ul id="risks"></ul></article>
+      <article class="result-card"><h4><span>06 /</span> Ways to improve it</h4><ul id="improvements"></ul></article>
+      <div class="notice"><strong>Prototype disclosure:</strong> AI-generated guidance is an initial planning aid. Budgets, availability, and technical feasibility are not independently verified. Test ideas carefully and seek expert guidance for safety-critical projects.</div>
+    </div>
+  </div>
+</section>
+<section class="features" id="features"><div class="wrap"><div class="section-intro"><div class="kicker">BUILT FOR CURIOSITY</div><h2>From “what if?” to “what next?”</h2><p>A clear framework for exploring an idea before investing time or money.</p></div>
+<div class="features-grid">
+  <article class="feature"><div class="feature-icon">◎</div><h3>Explore feasibility</h3><p>Identify the key assumptions and questions to test before committing to a design.</p></article>
+  <article class="feature"><div class="feature-icon">⌘</div><h3>Map requirements</h3><p>Start a checklist of materials, tools, skills, and resources your project may need.</p></article>
+  <article class="feature"><div class="feature-icon">↗</div><h3>Plan your next move</h3><p>Break a large ambition into smaller, testable stages and learn as you go.</p></article>
+</div></div></section>
+<section class="wrap" id="about" style="padding:5px 0 60px"><div class="section-intro"><div class="kicker">OUR PRINCIPLE</div><h2>Think boldly. Test thoughtfully.</h2><p>Hypra Vision's Founder is Hidayat Ashraf </p></div></section>
+</main>
+<footer><div class="wrap footer-inner"><span class="footer-brand">HYPRA <span>VISION</span> · BEYOND IMAGINATION</span><span>© <span id="year"></span> Hypra Vision · Prototype</span></div></footer>
+<script>
+const $=id=>document.getElementById(id);
+let currentReport=null;
+let saved=[];
+try{saved=JSON.parse(localStorage.getItem("hypraVisionSaved")||"[]")}catch(e){saved=[]}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function fillList(id,items){$(id).innerHTML=items.map(x=>`<li>${escapeHTML(x)}</li>`).join("")}
+function makeReport(idea){
+ const lower=idea.toLowerCase(),robot=/robot|rover|drone|sensor|machine|vehicle/.test(lower),app=/app|website|software|platform|digital|ai|artificial intelligence/.test(lower),environment=/water|rain|solar|energy|environment|waste|recycl|plant|farm/.test(lower);
+ let requirements=["Define the core function and success criteria","List the materials, tools, skills, and workspace needed","Create a low-cost prototype before scaling up"];
+ if(robot)requirements.unshift("Research suitable motors, sensors, power, and control hardware");
+ if(app)requirements.unshift("Sketch the user journey and choose a suitable software stack");
+ if(environment)requirements.unshift("Measure local conditions and expected real-world impact");
+ let feasibility=["Break the concept into smaller functions that can be tested independently","Check whether the required technology, skills, and materials are accessible","Build a small proof of concept and compare results with your success criteria"];
+ if(robot)feasibility[0]="Test mobility, sensing, control, and power as separate subsystems";
+ if(app)feasibility[0]="Validate the main user problem with a simple clickable mock-up";
+ if(environment)feasibility[1]="Check local conditions, maintenance needs, and resource availability";
+ let risks=["The first cost and timeline estimates may be inaccurate","Parts or technical skills may be harder to obtain than expected","A prototype may perform differently outside controlled tests"];
+ if(robot)risks[0]="Power consumption, terrain, and component reliability may limit performance";
+ if(app)risks[0]="Privacy, security, accessibility, and user needs must be considered early";
+ if(environment)risks[1]="Seasonal changes and local conditions may affect performance";
+ let improvements=["Start with one essential feature and add complexity only after it works","Track test results, costs, failures, and changes in a project notebook","Ask a teacher, mentor, or potential user to review the plan"];
+ if(robot)improvements[0]="Begin with a small-scale model before attempting difficult terrain";
+ if(app)improvements[0]="Let a few target users try the simplest version and share feedback";
+ if(environment)improvements[0]="Compare designs using cost, efficiency, and maintenance";
+ return {id:Date.now().toString(),idea,title:idea.length>78?idea.slice(0,75)+"…":idea,createdAt:new Date().toISOString(),overview:`Your concept focuses on: “${idea}”. Turn it into a testable question, identify the biggest unknowns, and build the smallest safe prototype that can help answer them.`,feasibility,requirements:[...new Set(requirements)].slice(0,5),steps:["Write a one-sentence goal and define how success will be measured","Research existing solutions and make a requirements list","Sketch the design and estimate costs before buying anything","Build a small prototype, test it safely, and record results","Improve the design based on evidence and feedback"],risks,improvements}
+}
+function showReport(r){currentReport=r;$("reportTitle").textContent=r.title;$("overview").textContent=r.overview;fillList("feasibility",r.feasibility);fillList("requirements",r.requirements);fillList("steps",r.steps);fillList("risks",r.risks);fillList("improvements",r.improvements);updateSaveButton();$("results").classList.remove("hidden");$("results").scrollIntoView({behavior:"smooth",block:"start"})}
+function updateSaveButton(){let yes=currentReport&&saved.some(x=>x.id===currentReport.id);$("saveBtn").textContent=yes?"✓ Saved":"☆ Save idea";$("saveBtn").classList.toggle("saved",!!yes)}
+$("analyzeBtn").addEventListener("click",async()=>{const idea=$("ideaInput").value.trim();$("error").textContent="";if(idea.length<12){$("error").textContent="Please describe your idea in a sentence (at least 12 characters).";$("ideaInput").focus();return}const btn=$("analyzeBtn");btn.disabled=true;btn.textContent="Analyzing…";try{const response=await fetch("/api/analyze",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({idea})});const data=await response.json();if(!response.ok)throw new Error(data.error||"Analysis failed. Please try again.");showReport({id:Date.now().toString(),idea,title:data.title||idea,createdAt:new Date().toISOString(),overview:data.overview,feasibility:data.feasibility,requirements:data.requirements,steps:data.steps,risks:data.risks,improvements:data.improvements});}catch(err){$("error").textContent=err.message||"Could not reach the AI service. Please try again.";}finally{btn.disabled=false;btn.innerHTML='Analyze idea <span>↗</span>'}});
+$("ideaInput").addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key==="Enter")$("analyzeBtn").click()});
+document.querySelectorAll(".example").forEach(b=>b.addEventListener("click",()=>{$("ideaInput").value=b.dataset.idea;$("ideaInput").focus();$("ideaInput").scrollIntoView({behavior:"smooth",block:"center"})}));
+$("saveBtn").addEventListener("click",()=>{if(!currentReport)return;let i=saved.findIndex(x=>x.id===currentReport.id);if(i>=0)saved.splice(i,1);else saved.unshift(currentReport);try{localStorage.setItem("hypraVisionSaved",JSON.stringify(saved));updateSaveButton()}catch(e){alert("Browser storage is unavailable. You can still print your report.")}});
+$("printBtn").addEventListener("click",()=>window.print());
+$("menuBtn").addEventListener("click",()=>$("nav").classList.toggle("open"));
+document.querySelectorAll("#nav a").forEach(a=>a.addEventListener("click",()=>$("nav").classList.remove("open")));
+$("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
